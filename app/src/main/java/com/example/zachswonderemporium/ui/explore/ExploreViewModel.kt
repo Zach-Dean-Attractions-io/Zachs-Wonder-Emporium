@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 
 class ExploreViewModel(val repository: Repository) : ViewModel() {
 
-    val attractionCategory = MutableLiveData<PointOfInterestCategory>(PointOfInterestCategory.ATTRACTIONS)
+    private val attractionCategory = MutableLiveData<PointOfInterestCategory>(PointOfInterestCategory.ATTRACTIONS)
 
     fun retrievePointsOfInterestByCategory(category: PointOfInterestCategory) {
         attractionCategory.value = category
