@@ -1,6 +1,8 @@
 # Zachs-Wonder-Emporium
 Udacity Capstone Project
 
+I have built an app for a theme park so a user can see their location with respect to nearby points of interest they may want to visit within the park. The user can add points of interest to a planner. They can also view live wait times (or show times/opening times depending on the type of point of interest) which can be refreshed as needed.
+
 ## Build & Run Instructions
 This project expects a Google Maps API Key in the `local.properties` file in the format `MAPS_API_KEY=<api_key>`
 
@@ -11,13 +13,13 @@ This project expects a Google Maps API Key in the `local.properties` file in the
 ### Build a navigable interface consisting of multiple screens of functionality and data
 
 _**Requirement**_: Application includes at least three screens with distinct features using either the Android Navigation Controller or Explicit Intents
-  - My application contains 5 screens, which can be navigated between by using the bottom navigation view
+- My application contains 5 screens, which can be navigated between by using the bottom navigation view
 
 _**Requirement**_: The Navigation Controller is used for Fragment-based navigation and intents are utilized for Activity-based navigation
-  - My application is a single activity application so uses fragment-based navigation
+- My application is a single activity application so uses fragment-based navigation
 
 _**Requirement**_: An application bundle is built to store data passed between Fragments and Activities
-  - A bundle is used to display the Point Of Interest detail on the Detail Screen. The selected Point Of Interest in the Time Screen is passed to the Detail Screen via a bundle and also using navigation safe args.
+- A bundle is used to display the Point Of Interest detail on the Detail Screen. The selected Point Of Interest in the Time Screen is passed to the Detail Screen via a bundle and also using navigation safe args.
 
 <p>
   <img src="/documentation/Explore_Screen.png" width="18%">
