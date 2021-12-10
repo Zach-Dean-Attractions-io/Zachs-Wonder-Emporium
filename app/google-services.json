@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "475244334040",
+    "project_id": "zachs-wonder-emporium-11848",
+    "storage_bucket": "zachs-wonder-emporium-11848.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475244334040:android:799468e7a1f75d124580ad",
+        "android_client_info": {
+          "package_name": "com.example.zachswonderemporium"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "475244334040-gnreevjp9bjrc6g1pmofjtkvlv5abuc2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.zachswonderemporium",
+            "certificate_hash": "c853780a602be0b6c6566ea0bf7a2fd6696e1d95"
+          }
+        },
+        {
+          "client_id": "475244334040-u9lacstk27sdccllc6b1ufgascb9f1or.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdZ4bYlU72B-uLsa6WGZ2RxO_ESfaYaOo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "475244334040-u9lacstk27sdccllc6b1ufgascb9f1or.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

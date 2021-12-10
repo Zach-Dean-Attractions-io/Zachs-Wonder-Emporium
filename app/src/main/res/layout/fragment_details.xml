@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="poiLiveTime"
+            type="com.example.zachswonderemporium.data.model.PointOfInterestLiveTime" />
+    </data>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:layoutDescription="@xml/detail_motion_layout">
+
+        <ImageView
+            android:id="@+id/detail_poi_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitCenter"
+            android:layout_margin="@dimen/details_small_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/detail_image_guideline"
+            imageUrl="@{poiLiveTime.component1().component6()}" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/detail_image_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <TextView
+            android:id="@+id/detail_poi_name"
+            style="@style/DetailTitle"
+            android:layout_margin="@dimen/details_normal_margin"
+            android:padding="@dimen/details_small_padding"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_image_guideline"
+            android:text="@{poiLiveTime.component1().component2()}" />
+
+        <TextView
+            android:id="@+id/detail_poi_live_time"
+            style="@style/DetailLiveTime"
+            android:layout_margin="@dimen/details_normal_margin"
+            android:padding="@dimen/details_small_padding"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_poi_name"
+            android:text="@{poiLiveTime.component2().component3()}" />
+
+        <TextView
+            android:id="@+id/detail_poi_summary"
+            style="@style/DetailSummary"
+            android:padding="@dimen/details_small_padding"
+            android:layout_margin="@dimen/details_normal_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_poi_live_time"
+            android:text="@{poiLiveTime.component1().component3()}" />
+
+
+
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</layout>

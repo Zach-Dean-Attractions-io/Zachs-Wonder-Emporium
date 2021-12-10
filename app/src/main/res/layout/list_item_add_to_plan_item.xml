@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="pointOfInterest"
+            type="com.example.zachswonderemporium.data.model.PointOfInterest" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/list_item_small_margin">
+
+        <ImageView
+            android:id="@+id/list_add_to_plan_image"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/list_add_to_plan_name"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            imageUrl="@{pointOfInterest.component7()}"/>
+
+        <TextView
+            android:id="@+id/list_add_to_plan_name"
+            style="@style/ListItemTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{pointOfInterest.component2()}"
+            android:layout_marginStart="@dimen/list_item_normal_margin"
+            app:layout_constraintStart_toEndOf="@+id/list_add_to_plan_image"
+            app:layout_constraintEnd_toEndOf="@+id/list_add_to_plan_checkbox"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/list_add_to_plan_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/list_add_to_plan_name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="poiWithLiveTime"
+            type="com.example.zachswonderemporium.data.model.PointOfInterestLiveTime" />
+        <variable
+            name="clickListener"
+            type="com.example.zachswonderemporium.ui.times.OnItemClickListener" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/list_item_small_margin"
+        android:onClick="@{() -> clickListener.onItemClicked(poiWithLiveTime)}">
+
+        <ImageView
+            android:id="@+id/list_poi_livetime_item_image"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/list_poi_livetime_item_name"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:imageUrl="@{poiWithLiveTime.component1().component7()}"/>
+
+        <TextView
+            android:id="@+id/list_poi_livetime_item_name"
+            style="@style/ListItemTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{poiWithLiveTime.component1().component2()}"
+            app:layout_constraintStart_toEndOf="@+id/list_poi_livetime_item_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/list_item_normal_margin"
+            app:layout_constraintBottom_toTopOf="@+id/list_poi_livetime_item_time" />
+
+        <TextView
+            android:id="@+id/list_poi_livetime_item_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{poiWithLiveTime.component2().component3()}"
+            app:layout_constraintStart_toEndOf="@+id/list_poi_livetime_item_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/list_poi_livetime_item_name"
+            android:layout_marginStart="@dimen/list_item_normal_margin"
+            android:textSize="@dimen/list_item_subtitle_text_size"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

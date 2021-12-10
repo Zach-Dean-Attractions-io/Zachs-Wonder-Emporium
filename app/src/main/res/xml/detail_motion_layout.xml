@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Transition
+        app:constraintSetStart="@+id/start"
+        app:constraintSetEnd="@+id/end"
+        app:duration="500"
+        app:autoTransition="animateToEnd">
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <!-- Name Slide In From Start -->
+        <Constraint
+            android:id="@+id/detail_poi_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_image_guideline"
+            app:layout_constraintBottom_toTopOf="@+id/detail_poi_live_time" />
+
+        <!-- Live Time Slide In From End -->
+        <Constraint
+            android:id="@+id/detail_poi_live_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_poi_name"
+            app:layout_constraintBottom_toTopOf="@+id/detail_poi_summary" />
+
+        <!-- Summary Slide In From Start -->
+        <Constraint
+            android:id="@+id/detail_poi_summary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_poi_live_time" />
+
+    </ConstraintSet>
+
+    <!-- End State -->
+    <ConstraintSet android:id="@+id/end">
+
+        <!-- Name -->
+        <Constraint
+            android:id="@+id/detail_poi_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_image_guideline"
+            app:layout_constraintBottom_toTopOf="@+id/detail_poi_live_time" />
+
+        <!-- Live Time -->
+        <Constraint
+            android:id="@+id/detail_poi_live_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_poi_name"
+            app:layout_constraintBottom_toTopOf="@+id/detail_poi_summary" />
+
+        <!-- Summary -->
+        <Constraint
+            android:id="@+id/detail_poi_summary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_poi_live_time" />
+
+    </ConstraintSet>
+
+</MotionScene>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Zachs Wonder Emporium</string>
+
+    <string name="title_explore">Explore</string>
+    <string name="title_planner">My Plan</string>
+    <string name="title_times">Times</string>
+
+    <string name="attractions">Attractions</string>
+    <string name="shows">Shows</string>
+
+    <string name="no_location_permission_snackbar">This app works best with your location! Please enable in the app settings</string>
+    <string name="device_location_setting_error">Unable to identify device location setting. Please enable manually</string>
+    <string name="device_location_setting_off">This app works best with your location! Please enable in the app settings</string>
+    <string name="add_to_plan">Add To Plan</string>
+</resources>
