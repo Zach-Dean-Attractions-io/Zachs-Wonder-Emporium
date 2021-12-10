@@ -14,4 +14,7 @@
     <dimen name="details_title_text_size">24sp</dimen>
     <dimen name="details_livetime_text_size">20sp</dimen>
     <dimen name="details_summary_text_size">16sp</dimen>
+    <dimen name="explore_small_margin">8dp</dimen>
+    <dimen name="icon_image_size">64dp</dimen>
+    <dimen name="delete_icon_size">24dp</dimen>
 </resources>

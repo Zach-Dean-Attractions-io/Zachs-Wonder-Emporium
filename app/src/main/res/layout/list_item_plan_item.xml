@@ -20,8 +20,8 @@
 
     <ImageView
         android:id="@+id/list_plan_item_image"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="@dimen/icon_image_size"
+        android:layout_height="@dimen/icon_image_size"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/list_plan_item_name"
         app:layout_constraintTop_toTopOf="parent"
@@ -42,8 +42,8 @@
 
     <ImageView
         android:id="@+id/list_plan_item_delete"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="@dimen/delete_icon_size"
+        android:layout_height="@dimen/delete_icon_size"
         android:src="@drawable/delete"
         android:layout_marginRight="@dimen/list_item_small_margin"
         app:layout_constraintStart_toEndOf="@+id/list_plan_item_name"
