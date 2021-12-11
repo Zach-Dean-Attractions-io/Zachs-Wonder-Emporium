@@ -264,43 +264,52 @@ class ExploreFragment : Fragment(), OnMapReadyCallback {
     // The onDestroy() method is called from onDestroyView() since the binding is made null there and then we get a NullPointerException trying it in onDestroy
     override fun onStart() {
         super.onStart()
-        binding.exploreMapView.onStart()
+        _binding?.let {
+            it.exploreMapView.onStart()
+        }
     }
 
     override fun onResume() {
         super.onResume()
-        binding.exploreMapView.onResume()
+        _binding?.let {
+            it.exploreMapView.onResume()
+        }
     }
 
     override fun onPause() {
         super.onPause()
-        binding.exploreMapView.onPause()
+        _binding?.let {
+            it.exploreMapView.onPause()
+        }
     }
 
     override fun onStop() {
         super.onStop()
-        binding.exploreMapView.onStop()
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-
+        _binding?.let {
+            it.exploreMapView.onStop()
+        }
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        binding.exploreMapView.onDestroy()
+        _binding?.let {
+            it.exploreMapView.onDestroy()
+        }
         _binding = null
     }
 
     override fun onLowMemory() {
         super.onLowMemory()
-        binding.exploreMapView.onLowMemory()
+        _binding?.let {
+            it.exploreMapView.onLowMemory()
+        }
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        binding.exploreMapView.onSaveInstanceState(outState)
+        _binding?.let {
+            it.exploreMapView.onSaveInstanceState(outState)
+        }
     }
 
 

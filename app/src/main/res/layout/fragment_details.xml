@@ -72,8 +72,6 @@
             app:layout_constraintTop_toBottomOf="@+id/detail_poi_live_time"
             android:text="@{poiLiveTime.component1().component3()}" />
 
-
-
-
     </androidx.constraintlayout.motion.widget.MotionLayout>
+
 </layout>
